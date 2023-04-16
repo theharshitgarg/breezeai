@@ -4,11 +4,6 @@ from flask import Flask, request
 app = Flask(__name__)
 
 
-@app.route("/")
-def hello():
-	return "Hello"
-
-
 @app.route("/reverse-string", methods=["GET"])
 def reverse_string():
 	string = request.args.get("q", "")
